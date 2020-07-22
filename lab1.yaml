@@ -1,0 +1,13 @@
+AWSTemplateFormationVersion: "2010-09-09"
+Description: Basic S3 Cloud Formation Template
+
+Resources: 
+    S3BucketForContent: 
+        Type: AWS::S3::Bucket
+        DeletionPolicy: Retain
+        Properties: 
+            AccessControl: PublicRead
+Outputs:
+    BucketName:
+        Value: !Ref S3BucketForContent
+        Description: Name of the Bucket Created
